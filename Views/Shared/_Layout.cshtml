@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" asp-append-version="true" crossorigin href="/vite-dist/bundle.css">
+    <title>@ViewData["Title"] - Vue 3 in .NET MVC</title>
+</head>
+
+<body>
+<div id="app"></div>
+<div id="ssr-body">
+    @RenderBody()
+</div>
+
+<script type="module" asp-append-version="true"  crossorigin src="/vite-dist/bundle.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
