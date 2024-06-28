@@ -9,11 +9,11 @@ export default defineConfig({
     vue(),
   ],
   build: {
-    
     emptyOutDir: true,
     
     rollupOptions: {
-      output: {
+      input: './src/main.ts',
+      output: {   
         dir: './wwwroot/vite-dist',
         
         entryFileNames(chunkInfo) {
