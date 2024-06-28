@@ -7,10 +7,9 @@
 /Views/Home/Index.cshtml  <--- Razor template including the vue component tag.
 ```
 
-#### Install and build front-end:
+#### Install front-end modules:
 ```sh
 $ npm install
-$ npm run build
 ```
 
 #### Run front-end and watch for changes (port 5555)
