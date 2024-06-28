@@ -7,8 +7,7 @@
 </template>
 
 <script setup lang="ts">
-
-import {ref} from "vue";
+import { ref } from "vue";
 
 const content = ref('dotnet.... 👳🏾‍')
 
@@ -17,7 +16,7 @@ const content = ref('dotnet.... 👳🏾‍')
 <style scoped>
 .wrapper {
   margin: 10px;
-  border: 2px solid orangered;
+  border: 2px solid mediumvioletred;
   border-radius: 8px;
   padding: 8px;
 }

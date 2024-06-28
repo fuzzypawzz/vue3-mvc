@@ -13,9 +13,14 @@ $ npm install
 $ npm run build
 ```
 
-#### Run dotnet backend
+#### Run front-end and watch for changes (port 5555)
 ```
-Just run the app. Click the launch icon depending on the IDE.
+npm run dev
+```
+
+#### Run dotnet back-end
+```sh
+$ dotnet run
 ```
 
 #### Credits

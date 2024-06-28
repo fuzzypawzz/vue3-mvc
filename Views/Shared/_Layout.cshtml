@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -13,7 +17,15 @@
     @RenderBody()
 </div>
 
-<script type="module" asp-append-version="true"  crossorigin src="/vite-dist/bundle.js"></script>
+@if (isDevelopment)
+{
+    <script type="module" src="http://localhost:5555/src/main.ts"></script>
+}
+else
+{
+    <script type="module" asp-append-version="true"  crossorigin src="/vite-dist/bundle.js"></script>
+}
+
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

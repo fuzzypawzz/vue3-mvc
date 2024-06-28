@@ -8,6 +8,12 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  server: {
+    port: 5555,
+    watch: {
+      usePolling: true
+    }
+  },
   build: {
     emptyOutDir: true,
     
