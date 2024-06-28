@@ -1,5 +1,7 @@
-﻿@{ 
+﻿@using vue3_mvc.Helpers
+@{ 
     var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+    var viteScriptAssetPath = ViteHelper.GetViteAssetPath("src/main.ts");
 }
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@
 }
 else
 {
-    <script type="module" asp-append-version="true"  crossorigin src="/vite-dist/bundle.js"></script>
+    <script type="module" asp-append-version="true"  crossorigin src="@viteScriptAssetPath"></script>
 }
 
 @await RenderSectionAsync("Scripts", required: false)

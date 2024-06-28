@@ -15,6 +15,7 @@ export default defineConfig({
     }
   },
   build: {
+    manifest: true,
     emptyOutDir: true,
     
     rollupOptions: {
@@ -23,12 +24,12 @@ export default defineConfig({
         dir: './wwwroot/vite-dist',
         
         entryFileNames(chunkInfo) {
-            return chunkInfo.isEntry ? 'bundle.js' : chunkInfo.name
+            return chunkInfo.isEntry ? 'bundle.[hash].js' : chunkInfo.name
         },
         
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'bundle.css'
+            return 'bundle.[hash].css'
           }
           
           return assetInfo.name as string
