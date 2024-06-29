@@ -7,7 +7,9 @@
 /Views/Home/Index.cshtml  <--- Razor template including the vue component tag.
 ```
 
-![Project Logo](./architecture.svg)
+#### Architecture
+
+![Architecture diagram](./architecture.svg)
 
 #### Install front-end modules:
 ```sh
