@@ -9,7 +9,7 @@
 
 #### Architecture
 
-![Architecture diagram](./architecture.svg)
+![Architecture diagram](./vue-mvc.png)
 
 #### Install front-end modules:
 ```sh
