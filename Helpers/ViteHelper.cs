@@ -6,7 +6,7 @@ public static class ViteHelper
 {
     public static string GetViteAssetPath(string assetName)
     {
-        var manifestPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "vite-dist", "manifest.json");
+        var manifestPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "vite-dist", ".vite", "manifest.json");
         if (File.Exists(manifestPath))
         {
             var json = File.ReadAllText(manifestPath);

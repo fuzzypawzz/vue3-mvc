@@ -1,0 +1,68 @@
+.switch {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.switch__label {
+    cursor: pointer;
+    user-select: none;
+}
+.switch__label--cursor-not-allowed {
+    cursor: not-allowed;
+}
+.switch__button {
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 32px;
+    line-height: 20px;
+    min-width: 65px;
+    padding: 1px 6px;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.3s;
+    /* ON STATE */
+    /* OFF STATE */
+    /* DISABLED STATE */
+}
+.switch__button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+.switch__button[aria-checked='true'] {
+    background-color: #39a63b;
+}
+.switch__button[aria-checked='true'] :last-child {
+    transition: opacity 0.2s 0.1s;
+}
+.switch__button[aria-checked='false'] {
+    background-color: #c8c8cd;
+}
+.switch__button[aria-checked='false'] :first-child {
+    opacity: 0;
+    transition: opacity 0.2s 0.1s;
+}
+.switch__button[aria-readonly='true'] {
+    cursor: not-allowed;
+    filter: grayscale(50%);
+    opacity: 0.8;
+}
+.switch__button .switch__knob {
+    background-color: white;
+    border-radius: 50%;
+    height: 26px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    transition: all 0.3s;
+    width: 26px;
+}
+.switch__button[aria-checked='true'] .switch__knob {
+    transform: translateX(33px);
+}
+.switch__knob-icon {
+    height: 26px;
+    padding: 5px;
+    width: 26px;
+}
+ 

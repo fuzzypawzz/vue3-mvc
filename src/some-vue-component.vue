@@ -15,10 +15,11 @@ const content = ref('dotnet.... 👳🏾‍')
 
 <style scoped>
 .wrapper {
-  margin: 10px;
+  width: fit-content;
+  margin: 10px 0;
   border: 2px solid mediumvioletred;
   border-radius: 8px;
-  padding: 8px;
+  padding: 2px 18px;
 }
 
 .dotnet {
