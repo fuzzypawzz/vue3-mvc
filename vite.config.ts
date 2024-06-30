@@ -39,7 +39,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // We need the template compiler, because we need to also compile vue templates (from Razor) at runtime:
+      'vue': 'vue/dist/vue.esm-bundler.js'
     }
   }
 })
