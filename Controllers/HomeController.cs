@@ -7,7 +7,7 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        var viewModel = new Test()
+        var viewModel = new HomePageViewModel()
         {
             Name = "Fuzzy",
             Age = 31

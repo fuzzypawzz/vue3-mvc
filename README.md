@@ -26,6 +26,12 @@ npm run dev
 $ dotnet run
 ```
 
+#### Auto-generate TypeScript models from C# classes
+```sh
+$ dotnet typegen generate
+```
+
+
 #### Credits
 - Jannik Maag (Fuzzypawzz)
 - Evgenios Pampoukos (Evgenios95)

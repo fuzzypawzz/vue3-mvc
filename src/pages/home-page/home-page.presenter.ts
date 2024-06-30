@@ -1,15 +1,10 @@
 import { computed } from "vue";
 import { useViewContext } from "@/helpers/view-context";
 import { presenterFactory } from "@/helpers/presenter-factory/presenter-factory";
-
-// TODO: Generate model def from C# classes
-type Model = {
-    name?: string
-    age?: number
-}
+import type { HomePageViewModel } from "@/models/home-page-view-model";
 
 export const useHomePagePresenter = presenterFactory(() => {
-    const { model } = useViewContext<Model>()
+    const { model } = useViewContext<HomePageViewModel>()
     
     return {
         viewModel: computed(() => {

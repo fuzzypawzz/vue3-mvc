@@ -1,6 +1,6 @@
 import { inject } from "vue";
 
-export function useViewContext<Model extends Record<string, unknown>>(): { model: Model } {
+export function useViewContext<Model extends object>(): { model: Model } {
     const model = inject<Model>('model')
 
     // TODO: Take schema argument and run the zod parsing

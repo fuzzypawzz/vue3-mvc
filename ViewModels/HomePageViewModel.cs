@@ -1,8 +1,10 @@
 using System.Text.Json;
+using TypeGen.Core.TypeAnnotations;
 
 namespace vue3_mvc.ViewModels;
 
-public class Test
+[ExportTsInterface(OutputDir = "src/models")]
+public class HomePageViewModel
 {
     public string? Name { get; set; }
     public int? Age { get; set; }
