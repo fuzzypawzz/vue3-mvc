@@ -13,6 +13,7 @@
 </template>
 
 <script setup lang="ts">
+import SwitchToggle from "@/components/switch-toggle/switch-toggle.vue";
 import { useHomePagePresenter } from "@/pages/home-page/home-page.presenter";
 
 const { viewModel } = useHomePagePresenter()
