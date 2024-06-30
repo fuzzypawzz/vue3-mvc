@@ -17,7 +17,7 @@ public static class ViteHelper
             }
         }
         
-        return null;
+        return "";
     }
 
     private class ViteManifestEntry

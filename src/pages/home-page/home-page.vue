@@ -17,7 +17,6 @@ import SwitchToggle from "@/components/switch-toggle/switch-toggle.vue";
 import { useHomePagePresenter } from "@/pages/home-page/home-page.presenter";
 
 const { viewModel } = useHomePagePresenter()
-
 </script>
 
 <style src="./home-page.css"></style>

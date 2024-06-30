@@ -1,11 +1,23 @@
 {
   "src/main.ts": {
-    "file": "bundle.COqOfFAo.js",
+    "file": "bundle.Ccpl-Vnc.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
+    "dynamicImports": [
+      "src/pages/home-page/home-page.vue"
+    ]
+  },
+  "src/pages/home-page/home-page.vue": {
+    "file": "assets/home-page-BrC9FuTB.js",
+    "name": "home-page",
+    "src": "src/pages/home-page/home-page.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ],
     "css": [
-      "bundle.BYdvpDnq.css"
+      "bundle.DZ2J0Tne.css"
     ]
   }
 }
