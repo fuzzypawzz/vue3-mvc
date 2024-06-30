@@ -4,6 +4,6 @@
  */
 
 export interface HomePageViewModel {
-    name: string;
-    age: number;
+  name: string;
+  age: number;
 }
