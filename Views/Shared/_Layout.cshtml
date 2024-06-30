@@ -14,8 +14,8 @@
 </head>
 
 <body>
-<div id="app"></div>
-<div id="ssr-body">
+<div id="app" style="display: none"></div>
+<div id="ssr-body" style="display: none">
     @RenderBody()
 </div>
 
@@ -25,9 +25,10 @@
 }
 else
 {
-    <script type="module" asp-append-version="true"  crossorigin src="@viteScriptAssetPath"></script>
+    <script type="module" asp-append-version="true" crossorigin src="@viteScriptAssetPath"></script>
 }
 
+@await Html.PartialAsync("_PageSpinner")
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

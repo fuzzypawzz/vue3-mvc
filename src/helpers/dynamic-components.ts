@@ -1,17 +1,12 @@
-import type { Component } from "vue";
-import HomePage from "@/pages/home-page/home-page.vue";
-import ViewContextProvider from "@/helpers/view-context-provider.vue";
+import type { AsyncComponentLoader } from "@vue/runtime-core";
 
 /**
- * Returns a list of component definitions to be passed to "app.component()".
+ * Returns a list of async component definitions to be passed to "app.component()".
  * You should only register the components needed for runtime compilation,
  * which in our case means only the components that are used in the Razor views.
- *
- * Note that tree-shaking won't work for these components.
  */
-export function getDynamicComponentsForRazorViews(): [string, Component][] {
+export function getAsyncPageComponentsForRazorViews(): [string, AsyncComponentLoader][] {
   return [
-    ['home-page', HomePage],
-    ['view-context-provider', ViewContextProvider]
+    ['home-page', () => import('../pages/home-page/home-page.vue')],
   ]
 }
