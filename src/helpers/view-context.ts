@@ -5,7 +5,11 @@ export function useViewContext<Model extends object>(): { model: Model } {
 
   // TODO: Take schema argument and run the zod parsing
 
-  if (!model) throw new Error('No model could be injected.')
+  if (!model) {
+    const message = 'No model to inject. Did you wrap your page component in a view-context-provider?'
+
+    throw new Error(message)
+  }
 
   return { model }
 }
