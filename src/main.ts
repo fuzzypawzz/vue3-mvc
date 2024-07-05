@@ -5,7 +5,7 @@ import ViewContextProvider from "@/helpers/view-context-provider.vue"
 import PageLoader from "./components/page-loader.vue"
 import { usePageLoader } from "@/components/loader"
 
-// Create the application with a root template that consists of the SSR generated HTML.
+// Create the application with a root template consisting of the server side generated HTML.
 const app = createApp({
   template: getServerSideRenderedBody()
 })
